@@ -1,41 +1,60 @@
 <!DOCTYPE html>
+<html>
 <head>
   <title>Calculator</title>
-  <body>
-    <p>
-    <button onclick="calculation += 1, console.log(calculation)">1</button>
-    <button onclick="calculation += 2, console.log(calculation)">2</button>
-    <button onclick="calculation += 3, console.log(calculation)">3</button>
-    <button onclick="calculation += '+', console.log(calculation)">+</button>
-    </p>
-    <p>
-    <button onclick="calculation += 4, console.log(calculation)">4</button>
-    <button onclick="calculation += 5, console.log(calculation)">5</button>
-    <button onclick="calculation += 6, console.log(calculation)">6</button>
-    <button onclick="calculation -= '-', console.log(calculation)">-</button>
-
-
-    </p>
-    <p>
-    <button onclick="calculation += 7, console.log(calculation)">7</button>
-    <button onclick="calculation += 8, console.log(calculation)">8</button>
-    <button onclick="calculation += 9, console.log(calculation)">9</button>
-    <button onclick="calculation *= '*', console.log(calculation)">*</button>
-
-    </p>
-    <p>
-      <button onclick="calculation += '0',console.log(calculation)">0</button>
-      <button onclick="console.log(eval(calculation))">=</button>
-      <button onclick="calculation +='', console.log(calculation)">.</button>
-      <button onclick="calculation /= '/', console.log(calculation)">/</button>
-
-    </p>
-
-    
-    <button onclick="calculation = 0, console.log('Cleared')">Clear</button>
-  </body>
-
-  <script src = 'calculator.js'></script>
-
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="calculator.css">
 </head>
+<body>
+
+  <div id="wrapper">
+
+    <div id="calculator">
+      <div id="display">
+        <div id="expression"></div>
+        <div id="result">0</div>
+      </div>
+
+      <div id="buttons">
+        <button onclick="clearCalc()">C</button>
+        <button onclick="percent()">%</button>
+        <button onclick="backspace()">←</button>
+        <button class="operator" onclick="append('/')">÷</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button class="operator" onclick="append('+')">+</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button class="operator" onclick="append('-')">-</button>
+
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button class="operator" onclick="append('*')">×</button>
+
+        <button onclick="append('00')">00</button>
+        <button onclick="append('0')">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="calculate()" id="equals">=</button>
+      </div>
+    </div>
+
+    <div id="history">
+      <div id="history-header">
+        <span>History</span>
+        <button id="clear-history-btn" onclick="clearHistory()">Delete History</button>
+      </div>
+      <ul id="history-list"></ul>
+    </div>
+
+  </div>
+
+  <script src="calculator.js"></script>
+
+</body>
+</html>
