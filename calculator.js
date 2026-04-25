@@ -42,7 +42,8 @@ function percent() {
 function calculate() {
   if (expression === '') return
   try {
-    const answer = eval(expression)
+    const raw = eval(expression)
+    const answer = parseFloat(raw.toFixed(10))
     resultDisplay.textContent = answer
     expressionDisplay.textContent = expression + ' ='
     history.unshift(`${expression} = ${answer}`)

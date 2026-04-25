@@ -46,6 +46,9 @@ body {
   font-size: 2.8rem;
   font-weight: 700;
   color: #3d1f0a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #buttons {
@@ -160,6 +163,7 @@ button:first-child:hover {
   background: #fff8f0;
   border-radius: 6px;
   border: 1px solid #d9c0a3;
+  word-break: break-all;
 }
 
 #empty-history {
