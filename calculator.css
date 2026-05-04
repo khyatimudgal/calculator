@@ -79,7 +79,6 @@ button:active {
   transform: translateY(1px);
 }
 
-/* Operators — warm brown */
 .operator {
   background: #e8d5b8;
   color: #7a4419;
@@ -89,7 +88,6 @@ button:active {
   background: #d9c0a0;
 }
 
-/* C — deep espresso */
 button:first-child {
   background: #7a4419;
   color: #f5ebe0;
@@ -100,7 +98,6 @@ button:first-child:hover {
   background: #5c3010;
 }
 
-/* Equals — coffee brown */
 #equals {
   background: #a0522d;
   color: #f5ebe0;
@@ -112,7 +109,6 @@ button:first-child:hover {
   background: #7a4019;
 }
 
-/* History */
 #history {
   background: #f5ebe0;
   border-radius: 12px;

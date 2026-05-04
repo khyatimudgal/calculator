@@ -12,7 +12,6 @@ function append(value) {
   const isOperator = ['+', '-', '*', '/'].includes(value)
 
   if (justCalculated) {
-    // if operator, continue from result — if number, start fresh
     if (!isOperator) expression = ''
     justCalculated = false
   }
